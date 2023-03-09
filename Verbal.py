@@ -19,11 +19,14 @@ time.sleep(1)
 driver.find_element("xpath", "//a[@class='btn-mic btn btn--primary-1']").click()
 time.sleep(4)
 textbox = driver.find_element("xpath", "//div[@class='ql-editor ql-blank']")
+
 while True:
     if textbox.text != '':
         if textbox.text.strip() == 'koniec':
+            textbox.clear()
             driver.quit()
             print('Koniec1')
+            exit()
         print(textbox.text)
         textbox.clear()
 
