@@ -7,8 +7,8 @@ import time
 browserDIR = r'--user-data-dir=C:\Users\Shinken\AppData\Local\Google\Chrome\User Data\Default'
 webdriverDIR = r'C:\Users\Shinken\AppData\Local\Google\Chrome\Application\chromedriver.exe'
 
-webdriverDIR = "/usr/bin/chromium-browser"
-browserDIR = "/home/pi/BETA-VERBAL/chromedriver_linux64/chromedriver"
+browserDIR = "/usr/bin/chromium-browser"
+webdriverDIR = "/usr/lib/chromium-browser/chromedriver"
 # C:\Users\Shinken\AppData\Local\Google\Chrome\User Data\Default
 options = Options()
 options.add_argument(browserDIR)
