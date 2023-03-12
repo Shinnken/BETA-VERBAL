@@ -2,15 +2,20 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
-
 import time
+
+browserDIR = r'--user-data-dir=C:\Users\Shinken\AppData\Local\Google\Chrome\User Data\Default'
+webdriverDIR = r'C:\Users\Shinken\AppData\Local\Google\Chrome\Application\chromedriver.exe'
+
+webdriverDIR = "/usr/bin/chromium-browser"
+browserDIR = "/home/pi/BETA-VERBAL/chromedriver_linux64/chromedriver"
 # C:\Users\Shinken\AppData\Local\Google\Chrome\User Data\Default
 options = Options()
-options.add_argument(r"user-data-dir=C:\Users\Shinken\AppData\Local\Google\Chrome\User Data\Default")
+options.add_argument(browserDIR)
 options.add_experimental_option("prefs", {
     "profile.default_content_setting_values.media_stream_mic": 1,
   })
-service = Service(r'C:\Users\Shinken\Documents\BETA\chromedriver_win32\chromedriver.exe')
+service = Service(webdriverDIR)
 stt = webdriver.Chrome(service=service, options=options)
 stt.get('https://dictation.io/speech')
 stt.minimize_window()
