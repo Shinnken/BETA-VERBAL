@@ -16,7 +16,7 @@ options.add_experimental_option("prefs", {
     "profile.default_content_setting_values.media_stream_mic": 1,
   })
 service = Service(webdriverDIR)
-stt = webdriver.Chrome(service=service, options=options)
+stt = webdriver.Chrome(webdriverDIR, options=options)
 stt.get('https://dictation.io/speech')
 stt.minimize_window()
 select = Select(stt.find_element("xpath", "//select[@id='lang']"))
