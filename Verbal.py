@@ -7,7 +7,7 @@ import time
 browserDIR = r'--user-data-dir=C:\Users\Shinken\AppData\Local\Google\Chrome\User Data\Default'
 webdriverDIR = r'C:\Users\Shinken\AppData\Local\Google\Chrome\Application\chromedriver.exe'
 
-browserDIR = "/usr/bin/chromium-browser"
+browserDIR = "/tmp/.org.chromium.Chromium.0sEz4a/Default"
 webdriverDIR = "/usr/lib/chromium-browser/chromedriver"
 # C:\Users\Shinken\AppData\Local\Google\Chrome\User Data\Default
 options = Options()
