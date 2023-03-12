@@ -23,7 +23,7 @@ select = Select(stt.find_element("xpath", "//select[@id='lang']"))
 select.select_by_value('pl-pl')
 time.sleep(1)
 stt.find_element("xpath", "//a[@class='btn-mic btn btn--primary-1']").click()
-time.sleep(20)
+time.sleep(5)
 textbox = stt.find_element("xpath", "//div[@class='ql-editor ql-blank']")
 
 while True:
